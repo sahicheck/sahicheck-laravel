@@ -1,0 +1,58 @@
+{
+    "name": "sahicheck/sahicheck-laravel",
+    "description": "Official Laravel integration for the SahiCheck verification API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "sahicheck",
+        "laravel",
+        "sdk",
+        "verification",
+        "phone-validation",
+        "email-verification",
+        "ip-lookup"
+    ],
+    "authors": [
+        {
+            "name": "SahiCheck",
+            "email": "sahicheckapi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "sahicheck/sahicheck-php": "^0.1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SahiCheck\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SahiCheck\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SahiCheck\\SahiCheckServiceProvider"
+            ],
+            "aliases": {
+                "SahiCheck": "SahiCheck\\Facades\\SahiCheck"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
